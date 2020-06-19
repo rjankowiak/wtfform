@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+.main {
+  background: #eeeef1;
+  border-radius: 5px;
+  width: 100%;
+}
+
+@mixin common__form {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #424242;
+  margin-bottom: 16px;
+}
+
+.form {
+  padding: 16px;
+  &__header {
+    @include common__form;
+    font-size: 44px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-areas:
+    "header header"
+    "parametera parameterb"
+    "submit submit";
+  grid-template-rows: auto auto auto;
+  &__header {
+    @include common__form;
+    font-size: 24px;
+    grid-area: header;
+  }
+  &__column {
+    &--a {
+      grid-area: parametera;
+    }
+    &--b {
+      grid-area: parameterb;
+    }
+    margin: 0 16px 6px 0;
+  }
+  &__submit {
+    grid-area: submit;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__item {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  &__label {
+    display: block;
+    @include common__form;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  &__input {
+    &--dd {
+      height: 27px;
+    }
+    &--label {
+      font-family: "Open Sans", sans-serif;
+      color: #424242;
+    }
+  }
+}
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #121232;
+  padding: 12px 16px;
+  margin: 4px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.weather {
+  font-family: "Open Sans", sans-serif;
+  color: #424242;
+  font-weight: 600;
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    grid-template-areas:
+      "header"
+      "parametera"
+      "parameterb"
+      "submit";
+  }
+}

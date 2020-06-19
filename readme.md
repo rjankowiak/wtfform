@@ -1,18 +1,17 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+# WTF Form - Ćwiczenia z formularzem
 
-# WTF Webpack Starter Kit 
+![Przykładowe zrzut ekranu formularza](public/form.png)
 
-Simple toolkit for your static websites development.
+## Prognoza pogody
 
-## How to use it?
+`Prosty przykład formularza internetowego pozwalającego na prognozowanie pogody w dowolnym miejscu świata`
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+[Wersja live action](rjankowiak.github.io/wtfform)
 
-## Available scripts
+## Instrukcja obsługi
 
-`npm run start` - runs development mode
-
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
-
+1. Uzupełnij dane formularza
+	1. Wypełnij pola wyboru
+	2. Wypełnij pola inne pola :)
+2. Wyślij formularz przyciskiem
+3. Poczekaj na prognozę
